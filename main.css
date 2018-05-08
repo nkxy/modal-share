@@ -28,6 +28,10 @@ button {
     to   { opacity: 1; }
 }
 
+.city-button: onclick {
+	
+}
+
 .fade-animation {
   animation: fadein 3s;
   animation-delay: 2s;
