@@ -1,3 +1,8 @@
+// html object elemnts to be used for the ChangeCity 
+// function
+var form = document.getElementById('city-form');
+var input = document.getElementById('form-box');
+
 // to store the number of lanes allocated for each of the different 
 // modal shares. (The data has already been processed)
 
@@ -60,18 +65,22 @@ function AllocateLanes (city) {
 	while (cycle > 0) {
 		--cycle;
 		// update the lane 
+		++curlane;
 	}
 	while (public > 0) {
 		--public;
 		// update the lane 
+		++curlane;
 	}
 	while (cars > 0) {
 		--cars;
 		// update the lane 
+		++curlane;
 	}
 	while (walk > 0) {
 		--walk;
 		// update the lane 
+		++curlane;
 	}
 }
 
@@ -80,13 +89,20 @@ function AllocateLanes (city) {
 // user inputs, checks to see if it exists in the 
 // database, and if it does, then it changes the 
 // lane display. 
-function ChangeCity (nameInput) {
+function ChangeCity () {
+	const nameInput = input.value;
 	var City = db.find(NameEquals, nameInput);
 	if (City != undefined) {
-		AllocateLane(City)
+		document.getElementById("alert").innerHTML = "";
+		AllocateLane(City);
 	} else {
-		// change this to show the user later. 
-		console.log("No city found")
+		document.getElementById("alert").innerHTML = "That city's data does not exist.";
+		console.log("No city found");
 	}
 }
+
+form.onsubmit = ChangeCity();
+
+
+
 
