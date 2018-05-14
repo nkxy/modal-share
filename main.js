@@ -2,7 +2,8 @@ function ChangeCity (name) {
 	var city = CreateLanes(name);
 }
 
-// 
+// returns a city object that contains all 
+// of the 
 function CreateLanes(name) {
 	if (name == Vancouver) {
 		return new City(7,2,20,69);
@@ -13,6 +14,9 @@ function CreateLanes(name) {
 	}
 }
 
+
+// to store the number of lanes allocated for each of the different 
+// modal shares. 
 
 class City {
 	constructor(walk, cycle, public, cars) {
