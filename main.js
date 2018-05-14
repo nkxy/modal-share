@@ -48,6 +48,34 @@ function NameEquals (name) {
 	return name == this;
 }
 
+// AllocateLanes(city) allocates the 
+// lanes in the road, based on the numbers
+// given by city. 
+function AllocateLanes (city) {
+	var curlane = 0; 
+	var cycle = city.cycle;
+	var public = city.public;
+	var cars = city.cars;
+	var walk = city.walk; 
+	while (cycle > 0) {
+		--cycle;
+		// update the lane 
+	}
+	while (public > 0) {
+		--public;
+		// update the lane 
+	}
+	while (cars > 0) {
+		--cars;
+		// update the lane 
+	}
+	while (walk > 0) {
+		--walk;
+		// update the lane 
+	}
+}
+
+
 // main function that is given the name that the 
 // user inputs, checks to see if it exists in the 
 // database, and if it does, then it changes the 
@@ -55,7 +83,7 @@ function NameEquals (name) {
 function ChangeCity (nameInput) {
 	var City = db.find(NameEquals, nameInput);
 	if (City != undefined) {
-		
+		AllocateLane(City)
 	} else {
 		// change this to show the user later. 
 		console.log("No city found")
