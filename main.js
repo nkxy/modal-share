@@ -41,4 +41,24 @@ const Montreal = new City(5,2,33,70);
 // database of city arrays. 
 const db = {Ottawa, Montreal}
 
+// NameEquals checks to see if the name 
+// of the city given equals the one 
+// we are searching for. 
+function NameEquals (name) {
+	return name == this;
+}
+
+// main function that is given the name that the 
+// user inputs, checks to see if it exists in the 
+// database, and if it does, then it changes the 
+// lane display. 
+function ChangeCity (nameInput) {
+	var City = db.find(NameEquals, nameInput);
+	if (City != undefined) {
+		
+	} else {
+		// change this to show the user later. 
+		console.log("No city found")
+	}
+}
 
