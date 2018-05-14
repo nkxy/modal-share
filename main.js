@@ -1,22 +1,5 @@
-function ChangeCity (name) {
-	var city = CreateLanes(name);
-}
-
-// returns a city object that contains all 
-// of the 
-function CreateLanes(name) {
-	if (name == Vancouver) {
-		return new City(7,2,20,69);
-	} else if (name == Ottawa) {
-		return new City(8,2,18,72);
-	} else if (name == Toronto) {
-		return new City(5,1,24,68);
-	}
-}
-
-
 // to store the number of lanes allocated for each of the different 
-// modal shares. 
+// modal shares. (The data has already been processed)
 
 class City {
 	constructor(walk, cycle, public, cars) {
@@ -40,10 +23,22 @@ class City {
 			}
 		}
 
+		if (c < 0) {
+			throw "negative lanes-incorrect numbers given";
+		}
+
 		this.cars = c;
 		this.public = p;
 		this.cycle = y;
 		this.walk = w;
 	}
 }
+
+// constants that will be put into the array 
+const Ottawa = new City(8,2,18,72);
+const Montreal = new City(5,2,33,70);
+
+// database of city arrays. 
+const db = {Ottawa, Montreal}
+
 
