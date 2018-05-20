@@ -34,6 +34,11 @@ img {
 	height: auto;
 }
 
+input {
+	color: white;
+	background-color: grey;
+}
+
 
 .city-button {
 
