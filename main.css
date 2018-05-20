@@ -1,5 +1,5 @@
 body {
-	font-family: sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	text-align: center;
 	background-color: #6F6E63;
 }
@@ -36,7 +36,10 @@ img {
 
 input {
 	color: white;
-	background-color: grey;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid white;
 }
 
 
