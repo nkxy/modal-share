@@ -12,7 +12,7 @@ hr {
 	display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid grey;
+    border-top: 4px solid black;
     padding: 0;
 	width: 80%;
 }
@@ -28,12 +28,30 @@ button {
     to   { opacity: 1; }
 }
 
+img {
+	width: 3%;
+	max-width: 100%;
+	height: auto;
+}
+
+
 .city-button {
 
 }
 
 .inner-lane {
-	border-top: dotted;
+	border-top: dashed;
+	border-width: 4px;
+	color: white;
+}
+
+.outer-lane {
+	height: 3px;
+	color: black;
+}
+
+.inside-lane {
+	height: 2rem;
 }
 
 .fade-animation {
