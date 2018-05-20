@@ -120,6 +120,7 @@ form.onsubmit = function () {
 	var City = db.find(NameEquals, nameInput);
 	if (City != undefined) {
 		document.getElementById("alert").innerHTML = "";
+		document.getElementById("city-title").innerHTML = City.city_name;
 		AllocateLanes(City);
 	} else {
 		document.getElementById("alert").innerHTML = "That city's data does not exist.";
