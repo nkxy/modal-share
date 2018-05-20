@@ -3,7 +3,6 @@
 <head>
 	<title>Modal Share</title>
 	<link rel="stylesheet" type="text/css" href="./main.css">
-	<script type="text/javascript" src="./main.js"></script>
 </head>
  
 <body>
@@ -13,29 +12,29 @@
  	</h1>
  	<br>
  	<p class="fade-animation">
- 		click on a city to get started.
+ 		lookup a city to get started.
  	</p>
  </div>
 
  <form id = "city-form" action="" class="fade-animation">
- 	<input id = "input-box" type="text" name="City">	
- 	<input type="submit" value = "Search"
- 	<p id="alert"></p>
+ 	<input id = "form-box" type="text" name="City">	
+ 	<input type="submit" value = "Search">
+ 	<p id="alert"> </p>
  </form>
 
  <div class="fade-animation">
- 	<hr>
- 	<div><hr class="inner-lane" id="1"> </div>
- 	<div><hr class="inner-lane" id="2"> </div>
- 	<div><hr class="inner-lane" id="3"> </div>
- 	<div><hr class="inner-lane" id="4"> </div>
- 	<div><hr class="inner-lane" id="5"> </div>
- 	<div><hr class="inner-lane" id="6"> </div>
- 	<div><hr class="inner-lane" id="7"> </div>
- 	<div><hr class="inner-lane" id="8"> </div>
- 	<div><hr class="inner-lane" id="9"> </div>
- 	<div> <hr id = "10">
+ 	<div class="inside-lane"><hr class="outer-lane"> <img id="1"></div>
+ 	<div class="inside-lane"><hr class="inner-lane"> <img id="2"> </div>
+ 	<div class="inside-lane"><hr class="inner-lane"> <img id="3"> </div>
+ 	<div class="inside-lane"><hr class="inner-lane"> <img id="4"> </div>
+ 	<div class="inside-lane"><hr class="inner-lane"> <img id="5"> </div>
+ 	<div class="inside-lane"><hr class="inner-lane"> <img id="6"> </div>
+ 	<div class="inside-lane"><hr class="inner-lane"> <img id="7"> </div>
+ 	<div class="inside-lane"><hr class="inner-lane"> <img id="8"> </div>
+ 	<div class="inside-lane"><hr class="inner-lane"> <img id="9"> </div>
+ 	<div class="inside-lane"><hr class="inner-lane"> <img id="10"> </div>
+ 	<hr class= "outer-lane">
  </div>
-
+ <script type="text/javascript" src="./main.js"></script>
 </body>
 </html>
