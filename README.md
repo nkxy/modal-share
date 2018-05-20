@@ -8,3 +8,6 @@ This webpage only uses fundemental Javascript, HTML, and CSS.
 The data used was from this Wikipedia article: 
 https://en.wikipedia.org/wiki/Modal_share
 
+# further implementations
+Transporting the data from Wikipedia into a mySQL database using SQL and Node.js
+
