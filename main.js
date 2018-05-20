@@ -82,12 +82,14 @@ function AllocateLanes (city) {
 	while (cycle > 0) {
 		--cycle;
 		document.getElementById(curlane).src = "./images/final/cycle.png";
+		document.getElementById(curlane).style= "";
 		console.log("cycle");
 		++curlane;
 	}
 	while (bus > 0) {
 		--bus;
 		document.getElementById(curlane).src = "./images/final/bus.png";
+		document.getElementById(curlane).style= "";
 		console.log("bus");
 		// update the lane 
 		++curlane;
@@ -95,6 +97,7 @@ function AllocateLanes (city) {
 	while (cars > 0) {
 		--cars;
 		document.getElementById(curlane).src = "./images/final/car.png";
+		document.getElementById(curlane).style= "";
 		console.log("cars");
 		// update the lane 
 		++curlane;
