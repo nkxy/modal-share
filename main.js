@@ -60,7 +60,8 @@ new City("San Antonio",2,0,3,90), new City("San Diego",3,1,3,85), new City("San 
 new City("San Jose",2,2,5,84), new City("Seattle",4,1,10,77), new City("Shanghai",27,20,33,20),
 new City("Singapore",22,1,44,33), new City("Sydney",5,1,27,67), new City("Taipei",15,4,33,48),
 new City("Tokyo",23,14,51,12), new City("Toronto",5,1,24,68), new City("Vancouver",7,2,20,69),
-new City("Vienna",26,7,39,28), new City("Warsaw",18,3,47,32), new City("Washington DC",4,1,16,72)];
+new City("Vienna",26,7,39,28), new City("Warsaw",18,3,47,32), new City("Washington DC",4,1,16,72),
+new City("Winnipeg",5,2,14,79)];
 
 // NameEquals checks to see if the name 
 // of the city given equals the one 
