@@ -44,6 +44,10 @@ input {
 	border-bottom: 1px solid white;
 }
 
+p {
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
 
 .btn {
     border: none;
