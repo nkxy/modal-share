@@ -1,3 +1,7 @@
+// db can be found in database.js 
+// City class definition in class.js
+
+
 // helper function for onsubmit method that allocates the lanes
 // in the road, based on the numbers given by city. 
 function AllocateLanes (city) {

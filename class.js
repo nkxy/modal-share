@@ -1,5 +1,5 @@
-// to store the number of lanes allocated for each of the different 
-// modal shares. (The data has already been processed)
+// class definition used in database.js. Takes in the raw data 
+// from wikipedia and through the constructor turns it into lanes.
 
 class City {
 	constructor(city_name, walk, cycle, bus, cars) {

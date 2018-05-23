@@ -1,4 +1,4 @@
-// database used in onsubmit function. 
+// database used in onsubmit method in onsubmit.js
 const db = [new City("Ottawa",8,2,18,72),new City("Montreal",5,2,33,70), 
 new City("Adelaide",3,1,11,85), new City("Atlanta",1,0,3,86), new City("Athens",8,2,37,53),
 new City("Auckland",4,1,9,85), new City("Baltimore",3,0,7,84), new City("Barcelona",32,2,39,27),
