@@ -1,8 +1,3 @@
-// html object elemnts to be used for the ChangeCity 
-// function
-var form = document.getElementById('city-form');
-var input = document.getElementById('form-box');
-
 // to store the number of lanes allocated for each of the different 
 // modal shares. (The data has already been processed)
 
@@ -40,7 +35,52 @@ class City {
 	}
 }
 
-// database of city arrays. 
+ 
+// helper function for onsubmit method that allocates the lanes
+// in the road, based on the numbers given by city. 
+function AllocateLanes (city) {
+	var curlane = 1; 
+	var cycle = city.cycle;
+	var bus = city.bus;
+	var cars = city.cars;
+	var walk = city.walk; 
+	while (cycle > 0) {
+		--cycle;
+		document.getElementById(curlane).src = "./images/final/cycle.png";
+		document.getElementById(curlane).style= "";
+		console.log("cycle");
+		++curlane;
+	}
+	while (bus > 0) {
+		--bus;
+		document.getElementById(curlane).src = "./images/final/bus.png";
+		document.getElementById(curlane).style= "";
+		console.log("bus");
+		++curlane;
+	}
+	while (cars > 0) {
+		--cars;
+		document.getElementById(curlane).src = "./images/final/car.png";
+		document.getElementById(curlane).style= "";
+		console.log("cars");
+		++curlane;
+	}
+	while (walk > 0) {
+		--walk;
+		document.getElementById(curlane).src = "./images/final/walk.png";
+		document.getElementById(curlane).style= "width: 1%";
+		console.log("walk");
+		++curlane;
+	}
+}
+
+// Helper function used by the onsubmit method,
+// while looking through the database.
+function NameEquals (current_name) {
+	return this.toUpperCase() == current_name.city_name.toUpperCase();
+}
+
+// database used in onsubmit function. 
 const db = [new City("Ottawa",8,2,18,72),new City("Montreal",5,2,33,70), 
 new City("Adelaide",3,1,11,85), new City("Atlanta",1,0,3,86), new City("Athens",8,2,37,53),
 new City("Auckland",4,1,9,85), new City("Baltimore",3,0,7,84), new City("Barcelona",32,2,39,27),
@@ -63,61 +103,12 @@ new City("Tokyo",23,14,51,12), new City("Toronto",5,1,24,68), new City("Vancouve
 new City("Vienna",26,7,39,28), new City("Warsaw",18,3,47,32), new City("Washington DC",4,1,16,72),
 new City("Winnipeg",5,2,14,79)];
 
-// NameEquals checks to see if the name 
-// of the city given equals the one 
-// we are searching for. 
-function NameEquals (current_name) {
-	return this.toUpperCase() == current_name.city_name.toUpperCase();
-}
+// taking form elements from the html to submit city name. 
+var form = document.getElementById('city-form');
+var input = document.getElementById('form-box');
 
- 
-// AllocateLanes(city) allocates the 
-// lanes in the road, based on the numbers
-// given by city. 
-function AllocateLanes (city) {
-	var curlane = 1; 
-	var cycle = city.cycle;
-	var bus = city.bus;
-	var cars = city.cars;
-	var walk = city.walk; 
-	while (cycle > 0) {
-		--cycle;
-		document.getElementById(curlane).src = "./images/final/cycle.png";
-		document.getElementById(curlane).style= "";
-		console.log("cycle");
-		++curlane;
-	}
-	while (bus > 0) {
-		--bus;
-		document.getElementById(curlane).src = "./images/final/bus.png";
-		document.getElementById(curlane).style= "";
-		console.log("bus");
-		// update the lane 
-		++curlane;
-	}
-	while (cars > 0) {
-		--cars;
-		document.getElementById(curlane).src = "./images/final/car.png";
-		document.getElementById(curlane).style= "";
-		console.log("cars");
-		// update the lane 
-		++curlane;
-	}
-	while (walk > 0) {
-		--walk;
-		document.getElementById(curlane).src = "./images/final/walk.png";
-		document.getElementById(curlane).style= "width: 1%";
-		console.log("walk");
-		// update the lane 
-		++curlane;
-	}
-}
-
-
-// main function that is given the name that the 
-// user inputs, checks to see if it exists in the 
-// database, and if it does, then it changes the 
-// lane display. 
+// take the city name submitted by user, checks to see if 
+// it exists, and then updates the road accordingly. 
 form.onsubmit = function () {
 	console.log("called change city");
 	const nameInput = input.value;
