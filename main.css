@@ -1,7 +1,9 @@
 body {
 	font-family: 'Montserrat', sans-serif;
 	text-align: center;
-	background-color: #6F6E63;
+	background: url(http://www.desktopimages.org/pictures/2014/0506/1/orig_61906.jpg) bottom center;
+	background-size: cover;
+	color: white;
 }
 
 h1 {
@@ -12,7 +14,7 @@ hr {
 	display: block;
     height: 1px;
     border: 0;
-    border-top: 4px solid black;
+    border-top: 4px solid white;
     padding: 0;
 	width: 80%;
 }
@@ -90,8 +92,7 @@ input {
 }
 
 .outer-lane {
-	height: 3px;
-	color: black;
+	height: 4px;
 }
 
 .inside-lane {
